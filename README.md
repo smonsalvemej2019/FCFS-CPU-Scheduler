@@ -10,7 +10,7 @@
 	<li>A CPU queue.</li>
 </ul>
 <p>I might use loops to update the data inside each node</p>
-<h1>ABOUT DATA</h1>
+<h3>ABOUT DATA</h3>
 <p>The data given to me is in the form of an integer array for each process in the form CPU burst, I/O time, CPU burst, I/O time etc.</p> 
 <p>The simulation needs to calculate waiting time(WT), response time(RT), and turnaround time(TT).</p>
 <p>So far the data I need in the node structure is the following.</p>
