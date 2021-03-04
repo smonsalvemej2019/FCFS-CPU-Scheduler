@@ -1,7 +1,7 @@
 # FCFS-CPU-Scheduler
 <h1>Updates by date</h1> 
 
-<h2>03/4/21<h2>
+<h2>03/4/21</h2>
 <p>I decided to turn the code I had for single linked list using object-oriented programming</p> 
 <p>into code for double linked list data structures. My plan is to implement 2 (maybe 3 queues)</p>
 <ul>
