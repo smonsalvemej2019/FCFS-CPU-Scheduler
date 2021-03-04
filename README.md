@@ -17,6 +17,6 @@
 <ul>
 	<li>Array data – Will use pointers to pass the arrays</li>
 	<li>Array counter – An integer will do. Array counters will be different for each process</li>
-	<li>Global counter – This will represent one time quanta. It is related to RT WT and TT.</li>
+	<li>Global counter – This will represent a single time quanta. It is related to RT WT and TT.</li>
 	<li>The global counter might be outside the class.</li>
 </ul>
