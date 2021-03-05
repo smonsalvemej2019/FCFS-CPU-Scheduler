@@ -21,7 +21,7 @@ into code for double linked list data structures. My plan is to implement 2 (may
 </ul>
 <hr>
 <h2>03/5/21</h2>
-<p>I have made some test with the array data. My goal this time was to have a global counter that will simulate the CPU clock<br>
+<p>I have made some test with the array data. My goal this time was to have a global counter that will simulate the CPU clock
 and an internal counter that will manage the position of the array. My desired output was the following:</p>
 <ul>
 <li>Data in array A[n] = t and the output would be t, t-1, t-2, … , t – t + 1 such that t > 0 and sizeof(A[n]) ≥ n ≥ 0.</li> 
