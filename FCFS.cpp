@@ -72,7 +72,7 @@ if (head == NULL){//creates initial node
 cout<<"Node created"<<endl;
 }
 
-
+#pragma region  //region of code not being used
 
 // void linked_list::insertFront(int n){//creates a temp node and links it to the head then,sets tmp as head
 
@@ -208,6 +208,7 @@ cout<<"Node created"<<endl;
 // return count;
 // }
 
+#pragma endregion
 
 void linked_list::display(){
 
@@ -296,9 +297,42 @@ if(a != NULL && b!=NULL){
     int P8[] = { 15, 50, 4, 23, 11, 31, 4, 31, 3, 47, 5, 21, 8, 31, 6, 44, 9};
 
     linked_list wqueue;
-
     wqueue.create_node(P1);
-    wqueue.display();
+    linked_list io;
+
+    node * in = wqueue.gethead();
+    node * out = io.gethead();
+    int internalcounter = 0;
+    int externalcounter = 0;
+    int datasize = sizeof(P1)/sizeof(P1[0]);
+
+
+    while( in != NULL || out !=NULL ){
+
+        
+        if(in->data[internalcounter] == 0){
+
+            internalcounter++;
+            cout<< "\n\n";
+
+        }
+        if(internalcounter == datasize){
+
+            in = NULL;
+
+        }else{
+
+            cout<<in->data[internalcounter]<< "  ";
+            in->data[internalcounter]--;
+            externalcounter++;
+
+        }
+
+
+
+    }
+
+    cout << "\n\n" << externalcounter <<endl;
 
 
 return 0;
