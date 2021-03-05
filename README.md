@@ -22,12 +22,12 @@
 </ul>
 <hr>
 <h2>03/5/21</h2>
-<pre>I have made some test with the array data. My goal this time was to have a global counter that will simulate the CPU clock, and an internal counter that will manage the position of the array. My desired output was the following:</pre>
+<p>I have made some test with the array data. My goal this time was to have a global counter that will simulate the CPU clock</p>
+<p>and an internal counter that will manage the position of the array. My desired output was the following:</p>
 <ul>
 <li>Data in array A[n] = t and the output would be t, t-1, t-2, … , t – t + 1 such that t > 0 and sizeof(A[n]) ≥ n ≥ 0.</li> 
 <li>The global counter S such that S = A[0] + A[1] + A[2] + … + A[n] (the size of the outputted string)</li>
 </ul>
-<pre> For example. If my array is {3,2,1} my output is the following: 321211 And 6.
-for more detail on the code please go to repo\code-snipets\3-5-21Update.txt
-</pre>
+<p> For example. If my array is {3,2,1} my output is the following: 321211 And 6.</p>
+<p>for more detail on the code please go to repo\code-snipets\3-5-21Update.txt</p>
  
