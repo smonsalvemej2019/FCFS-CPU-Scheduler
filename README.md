@@ -2,7 +2,7 @@
 <h1>Updates by date</h1> 
 <hr>
 <h2>03/4/21</h2>
-<p>I decided to turn the code I had for single linked list using object-oriented programming<br> 
+<p>I decided to turn the code I had for single linked list using object-oriented programming
 into code for double linked list data structures. My plan is to implement 2 (maybe 3 queues)</p>
 <ul>
 	<li>A waiting queue.</li>
@@ -29,4 +29,17 @@ and an internal counter that will manage the position of the array. My desired o
 </ul>
 <p> For example. If my array is {3,2,1} my output is the following: 321211 And 6.<br>
 <p>for more detail on the code please go to repo\code-snipets\3-5-21Update.txt</p>
+<h2>03/6/21</h2>
+<p>
+
+<p>The mechanism to prevent problems with memory consist of the following:</p>
+<dl>
+<dt>If waiting queue head =/= Null</dt>4
+	<dd>Run code.</dd>
+<dt>If I/O queue =/= Null</dt>4
+	<dd>Run code.</dd>
+</dl>
+<p>The code will process only the head of the waiting queue (CPU) and/or the whole I/O queue.
+Whenever the internal counters for any process increases then it will make a switch (context switch). In a switch, if the process is moved into I/O then it will be put on any position (position does not matter because the I/O queue must be iterated trough completely) and the head of waiting queue will be pointing to a new process.</p>
+
  

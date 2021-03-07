@@ -309,27 +309,57 @@ if(a != NULL && b!=NULL){
 
     while( in != NULL || out !=NULL ){
 
-        
-        if(in->data[internalcounter] == 0){
+        if(in != NULL){
+            
+            if(in->data[internalcounter] == 0){
 
-            internalcounter++;
-            cout<< "\n\n";
+                
+                internalcounter++;
+                out = in;
+                in = NULL;
+                cout<<"\ncontextswitch"<<endl;
+
+            }else if(internalcounter == datasize){
+                
+                in = NULL;
+                out = NULL;
+                
+            }else{
+                
+                cout<<in->data[internalcounter]<< "  ";
+                in->data[internalcounter]--;
+                externalcounter++;
+
+            }
 
         }
-        if(internalcounter == datasize){
 
-            in = NULL;
 
-        }else{
 
-            cout<<in->data[internalcounter]<< "  ";
-            in->data[internalcounter]--;
-            externalcounter++;
+        if(out != NULL){
+
+            if(out->data[internalcounter] == 0){
+
+                
+                internalcounter++;
+                in = out;
+                out = NULL;
+                cout<<"\ncontextswitch"<<endl;
+
+            }else if(internalcounter == datasize){
+                
+                in = NULL;
+                out = NULL;
+                
+            }else{
+                
+                cout<<out->data[internalcounter]<< "  ";
+                out->data[internalcounter]--;
+                externalcounter++;
+
+            }
 
         }
-
-
-
     }
 
     cout << "\n\n" << externalcounter <<endl;
