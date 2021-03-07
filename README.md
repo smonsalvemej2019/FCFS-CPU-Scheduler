@@ -1,6 +1,5 @@
 # FCFS-CPU-Scheduler
 <h1>Updates by date</h1> 
-<hr>
 <h2>03/4/21</h2>
 <p>I decided to turn the code I had for single linked list using object-oriented programming
 into code for double linked list data structures. My plan is to implement 2 (maybe 3 queues)</p>
@@ -19,7 +18,6 @@ into code for double linked list data structures. My plan is to implement 2 (may
 	<li>Global counter – This will represent a single time quanta. It is related to RT WT and TT.</li>
 	<li>The global counter might be outside the class.</li>
 </ul>
-<hr>
 <h2>03/5/21</h2>
 <p>I have made some test with the array data. My goal this time was to have a global counter that will simulate the CPU clock
 and an internal counter that will manage the position of the array. My desired output was the following:</p>
@@ -29,9 +27,8 @@ and an internal counter that will manage the position of the array. My desired o
 </ul>
 <p> For example. If my array is {3,2,1} my output is the following: 321211 And 6.<br>
 <p>for more detail on the code please go to repo\code-snipets\3-5-21Update.txt</p>
-<h2>03/6/21</h2>
-<p>
 
+<h2>03/6/21</h2>
 <p>The mechanism to prevent problems with memory consist of the following:</p>
 <dl>
 <dt>If waiting queue head =/= Null</dt>
