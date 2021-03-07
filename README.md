@@ -34,10 +34,10 @@ and an internal counter that will manage the position of the array. My desired o
 
 <p>The mechanism to prevent problems with memory consist of the following:</p>
 <dl>
-<dt>If waiting queue head =/= Null</dt>4
-	<dd>Run code.</dd>
-<dt>If I/O queue =/= Null</dt>4
-	<dd>Run code.</dd>
+<dt>If waiting queue head =/= Null</dt>
+<dd>Run code.</dd>
+<dt>If I/O queue =/= Null</dt>
+<dd>Run code.</dd>
 </dl>
 <p>The code will process only the head of the waiting queue (CPU) and/or the whole I/O queue.
 Whenever the internal counters for any process increases then it will make a switch (context switch). In a switch, if the process is moved into I/O then it will be put on any position (position does not matter because the I/O queue must be iterated trough completely) and the head of waiting queue will be pointing to a new process.</p>
