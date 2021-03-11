@@ -178,7 +178,7 @@ int main (){
     while(cpu!=NULL || iohead!=NULL){//
     iotail = ioqueue.gettail();
     wqueuetail = wqueue.gettail();
-    
+    resulttail = results.gettail();
 
     
     if(cpu != NULL){//process the cpu if not empty
@@ -197,37 +197,41 @@ int main (){
             if(cpu->internalCount == cpu->datasize){
 
                 if(cpu->next == NULL){
-                    
-                    cpu->turnaroundtime = cpu->totaltime;
+                    cpu->turnaroundtime = externalcounter;
                    // cout<<cpu->name<<" Deleted"<<endl;
-
                     if(results.head == NULL){
-
-                    results.head == cpu;
-
-                    }
-
-                    resulttail = cpu;
-                    resulttail->next = NULL;
-                    resulttail = resulttail->next;
-                    deletetemp = cpu;
+                    results.head = cpu;
+                    results.tail = cpu;
                     cpu=NULL;
-                    delete deletetemp;
-
+                    }else{
+                    resulttail->next = cpu;
+                    resulttail = resulttail->next;
+                    resulttail->next = NULL;
+                    //deletetemp = cpu;
+                    cpu=NULL;
+                    //delete deletetemp;
+                    }
                 }else{
                 
-                cpu->turnaroundtime = cpu->totaltime;
-               // cout<<cpu->name<<" "<<endl;
-                deletetemp = cpu;
-                resulttail = cpu;
-                cpu = cpu->next;
-                resulttail->next = NULL;
-                resulttail = resulttail->next;
-                if(cpu != NULL){
-                cpu->prev = NULL;}
-                delete deletetemp;
-            
-            }
+                cpu->turnaroundtime = externalcounter;
+                //deletetemp = cpu;
+                if(results.head == NULL){
+                    results.head = cpu;
+                    results.tail = cpu;
+                    cpu = cpu->next;
+                    results.head->next = NULL;
+                    results.tail->next = NULL;
+                    cpu->prev = NULL;
+                    }else{
+                    resulttail->next = cpu;
+                    cpu = cpu->next;
+                    resulttail = resulttail->next;
+                    resulttail->next = NULL;
+                    if(cpu != NULL){
+                    cpu->prev = NULL;}
+               // delete deletetemp;
+                    }
+                }
         }else{
             cpu->contextSwitch++;
            // cout<<"\n"<<cpu->name<<endl;
@@ -263,7 +267,6 @@ int main (){
         } 
         if(cpu!= NULL) { 
             cpu->data[cpu->internalCount]--;
-            cpu->totaltime++;
         }
         }
 
@@ -323,7 +326,6 @@ int main (){
 
             }else{
                 tmp->data[tmp->internalCount]--;
-                tmp->totaltime++;
                 tmp = tmp->next;
 
             }
