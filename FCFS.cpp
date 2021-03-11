@@ -35,19 +35,17 @@ class linked_list{
     int nodecntr();//counts the number of nodes in the list
     void create_node(string name, int data[], int datasize);//create node and inserts it at the end
     void sethead(node* newhead);//sets a new head 
-    void display();//data display method
+    void display();//data display m ethod
     void displayAdj(int pos);//displays the values of the, and adjacent to the given position
     node* gethead();//get head method
     node* gettail();//get tail method
 };
-
 //----------------------------methods definition------------------------------------//
 
 linked_list::linked_list(){//set the head of the node to null atuomatically 
     head=NULL; 
     tail=NULL; 
 }
-
 void linked_list::create_node(string name, int data[], int datasize){//create node function definition
 
 node *tmp = new node;
@@ -72,9 +70,7 @@ if (head == NULL){//creates initial node
 }
 cout<<tmp->name<<" created"<<endl;
 }
-
 void linked_list::display(){
-
     int count = 1;
     node* tmp;//creates a temporary node that will traverse the list
     tmp = head;//set the addesss to the head of the list
@@ -82,43 +78,24 @@ void linked_list::display(){
         cout<<"\nThe list is empty\n";
         return;
     }
-
-    cout<<endl;
-
     while(tmp != NULL){//the while loop will traverse the list
         cout<<" "<<tmp->name;//displays the data
         tmp = tmp->next;//moves to the next node
         count++;
     }
 }
-node * linked_list::gethead(){ 
-
-    return head; 
-
-}
-
+node * linked_list::gethead(){ return head;}
 node * linked_list::gettail(){
-
     node * tmp;
     tmp = gethead();
-
     if(tmp == NULL){
-
         return tmp;
-
     }else if(tmp->next == NULL){
-
         return tmp;
-
-    }
-
-    while(tmp->next != NULL){
-        tmp = tmp->next;
-    }
+    }else
+    while(tmp->next != NULL){tmp = tmp->next;}
     tail = tmp;
     return tail;
-
-
 }
 
 
