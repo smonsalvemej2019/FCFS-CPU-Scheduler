@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <iomanip>
 using namespace std;
 
 
@@ -7,13 +8,13 @@ using namespace std;
 struct node{//structure of the node 
 
     //---------------------------------process variables------------------------------//
-//data array and supplemental
+    //data array and supplemental
     int * data;//given data array
     int datasize;//size of the array
     int internalCount;//array iterator
     int totaltime;//addition of the array elements (burst+i/o)
     
-//process information 
+    //process information 
     string name;//name of the process(P1-P8)
     int contextSwitch;//number of context switches
     int responsetime ;//time the process started
@@ -98,7 +99,9 @@ node * linked_list::gettail(){
     return tail;
 }
 
+//-------------------------------------Function Prototype-------------------------------------------//
 
+void displayCurrent(linked_list wqueue, linked_list ioqueue, int time);
 
 //-------------------------------------Main Function------------------------------------------------//
 
@@ -133,7 +136,9 @@ int main (){
     node *iotail = ioqueue.gettail();
     node *resulttail = results.gettail();
     
-    int externalcounter = 0;//our clock     
+    int externalcounter = 0;//cpu clock 
+
+    displayCurrent(wqueue, ioqueue, externalcounter);  
     
     while(cpu!=NULL || iohead!=NULL){//
     iotail = ioqueue.gettail();
@@ -145,7 +150,6 @@ int main (){
         if(cpu->responsetime <= -1){cpu->responsetime = externalcounter;}
         if(cpu->data[cpu->internalCount] == 0){
             cpu->internalCount++; 
-            cout<<cpu->name<<"  "<<externalcounter<<endl;
             if(cpu->internalCount == cpu->datasize){
                 if(cpu->next == NULL){
                     cpu->turnaroundtime = externalcounter;
@@ -179,7 +183,6 @@ int main (){
                 }
         }else{
             cpu->contextSwitch++;
-            // cout<<"\n"<<cpu->name<<endl;
             if(ioqueue.gethead() == NULL){//if the i/o queue is empty
                 iohead = cpu;
                 iotail = cpu;
@@ -187,6 +190,9 @@ int main (){
                 if(cpu!=NULL){cpu->prev = NULL;}
                 iohead->next = NULL; 
                 iohead->prev = NULL;
+                wqueue.head = cpu;
+                ioqueue.head = iohead;
+                displayCurrent(wqueue, ioqueue, externalcounter);  
             }else{//if the i/o queue is populated
                 iotail->next = cpu;
                 cpu = cpu->next;
@@ -194,6 +200,9 @@ int main (){
                 iotail->next->prev = iotail;
                 iotail=iotail->next;
                 iotail->next = NULL;
+                wqueue.head= cpu;
+                ioqueue.head = iohead;
+                displayCurrent(wqueue, ioqueue, externalcounter);  
                 }
             }
         } 
@@ -256,4 +265,42 @@ int main (){
     cout << "\n\n" << externalcounter <<endl;
     results.display();
     return 0;
+}
+
+void displayCurrent(linked_list wqueue, linked_list ioqueue, int time){
+    node *cpu = wqueue.gethead();
+    node *wqueueHead;
+    node *ioqueueHead = ioqueue.gethead();
+    cout<<"\n\n"<<setw(30)<<right<<"Current Time: "<<time;
+    cout<<"\n----------------------------------------";
+    
+    if(cpu == NULL){
+            wqueueHead = NULL;
+            cout<<"\n"<<setw(20)<<right<<"CPU is currently IDLE";
+    }else{
+            wqueueHead = cpu->next;
+            cout<<"\n"<<setw(20)<<right<<"Cureently in CPU"<<setw(20)<<right<<"Burst";
+            cout<<"\n\n"<<setw(20)<<right<<cpu->name<<setw(20)<<right<<cpu->data[cpu->internalCount];
+    }
+    cout<<"\n----------------------------------------";
+    if(wqueueHead == NULL){cout<<"\n"<<setw(20)<<right<<"The waiting queue is empty";}
+    else{
+        cout<<"\n"<<setw(20)<<right<<"Cureently Waiting";
+        cout<<"\n"<<setw(20)<<right<<"Process"<<setw(20)<<right<<"Burst";
+        while(wqueueHead!=NULL){
+        cout<<"\n"<<setw(20)<<right<<wqueueHead->name<<setw(20)<<right<<wqueueHead->data[wqueueHead->internalCount];
+        wqueueHead = wqueueHead->next;
+        }
+    }
+    cout<<"\n----------------------------------------";
+    if(ioqueueHead == NULL){cout<<"\n"<<setw(20)<<right<<"The I/O Queue is empty";}
+    else{
+        cout<<"\n"<<setw(20)<<right<<"Cureently in I/O";
+        cout<<"\n"<<setw(20)<<right<<"Process"<<setw(20)<<right<<"I/O time left";
+        while(ioqueueHead!=NULL){
+        cout<<"\n"<<setw(20)<<right<<ioqueueHead->name<<setw(20)<<right<<ioqueueHead->data[ioqueueHead->internalCount];
+        ioqueueHead = ioqueueHead->next;
+        }
+    }
+    cout<<"\n----------------------------------------";
 }
