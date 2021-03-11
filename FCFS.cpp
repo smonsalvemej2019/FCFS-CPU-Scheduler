@@ -7,23 +7,19 @@ using namespace std;
 struct node{//structure of the node 
 
     //---------------------------------process variables------------------------------//
-
-    //data array and supplemental
-
+//data array and supplemental
     int * data;//given data array
     int datasize;//size of the array
     int internalCount;//array iterator
     int totaltime;//addition of the array elements (burst+i/o)
     
-    //process information 
-
+//process information 
     string name;//name of the process(P1-P8)
     int contextSwitch;//number of context switches
     int responsetime ;//time the process started
     int turnaroundtime;//time the process ended
 
     //--------------------------data structures variables----------------------------//
-
     struct node * next;
     struct node * prev;
 };
@@ -34,31 +30,20 @@ class linked_list{
     // creation, traversal, and delition. 
     //set the structs for the head and tail 
     public: 
-
     node *head,*tail;
-
     linked_list();//constructor
-
     int nodecntr();//counts the number of nodes in the list
-
     void create_node(string name, int data[], int datasize);//create node and inserts it at the end
-    
     void sethead(node* newhead);//sets a new head 
-
-
     void display();//data display method
     void displayAdj(int pos);//displays the values of the, and adjacent to the given position
-
-    node* gethead();//get hed method
-    node* gettail();
-
-  
+    node* gethead();//get head method
+    node* gettail();//get tail method
 };
 
 //----------------------------methods definition------------------------------------//
 
 linked_list::linked_list(){//set the head of the node to null atuomatically 
-    
     head=NULL; 
     tail=NULL; 
 }
@@ -81,12 +66,10 @@ if (head == NULL){//creates initial node
     head = tmp;
     tail = tmp;
 }else{//adds a node to the tail
-    
     tail->next = tmp;
     tmp->prev = tail;
     tail = tmp;
 }
-
 cout<<tmp->name<<" created"<<endl;
 }
 
@@ -179,42 +162,28 @@ int main (){
     iotail = ioqueue.gettail();
     wqueuetail = wqueue.gettail();
     resulttail = results.gettail();
-
-    
+//--if the cpu is not empty-----------------------------------------------------//
     if(cpu != NULL){//process the cpu if not empty
-
        //cout<<"In cpu: "<<cpu->name<<"\t"<<cpu->data[cpu->internalCount]<<endl;
-
-
         if(cpu->responsetime <= -1){cpu->responsetime = externalcounter;}
-
-
         if(cpu->data[cpu->internalCount] == 0){
-
             cpu->internalCount++; 
             cout<<cpu->name<<"  "<<externalcounter<<endl;
-
             if(cpu->internalCount == cpu->datasize){
-
                 if(cpu->next == NULL){
                     cpu->turnaroundtime = externalcounter;
-                   // cout<<cpu->name<<" Deleted"<<endl;
                     if(results.head == NULL){
-                    results.head = cpu;
-                    results.tail = cpu;
-                    cpu=NULL;
+                        results.head = cpu;
+                        results.tail = cpu;
+                        cpu=NULL;
                     }else{
-                    resulttail->next = cpu;
-                    resulttail = resulttail->next;
-                    resulttail->next = NULL;
-                    //deletetemp = cpu;
-                    cpu=NULL;
-                    //delete deletetemp;
+                        resulttail->next = cpu;
+                        resulttail = resulttail->next;
+                        resulttail->next = NULL;
+                        cpu=NULL;
                     }
                 }else{
-                
                 cpu->turnaroundtime = externalcounter;
-                //deletetemp = cpu;
                 if(results.head == NULL){
                     results.head = cpu;
                     results.tail = cpu;
@@ -229,107 +198,69 @@ int main (){
                     resulttail->next = NULL;
                     if(cpu != NULL){
                     cpu->prev = NULL;}
-               // delete deletetemp;
                     }
                 }
         }else{
             cpu->contextSwitch++;
-           // cout<<"\n"<<cpu->name<<endl;
+            // cout<<"\n"<<cpu->name<<endl;
             if(ioqueue.gethead() == NULL){//if the i/o queue is empty
-
                 iohead = cpu;
                 iotail = cpu;
-
                 cpu = cpu->next;
-                if(cpu!=NULL){
-                cpu->prev = NULL;
-                }
+                if(cpu!=NULL){cpu->prev = NULL;}
                 iohead->next = NULL; 
                 iohead->prev = NULL;
-
             }else{//if the i/o queue is populated
-
                 iotail->next = cpu;
                 cpu = cpu->next;
-                if(cpu != NULL){
-                cpu->prev = NULL;
-                }
+                if(cpu != NULL){cpu->prev = NULL;}
                 iotail->next->prev = iotail;
                 iotail=iotail->next;
                 iotail->next = NULL;
-
+                }
             }
-
-           // cout<<"\ncontextswitch"<<endl;
-
-        }
-
         } 
-        if(cpu!= NULL) { 
-            cpu->data[cpu->internalCount]--;
+        if(cpu!= NULL) {cpu->data[cpu->internalCount]--;}
         }
-        }
-
-
-
+//--if the I/O quque is not empty--------------------------------------------------//
     if(iohead != NULL){//process the i/o queue if not empty
-        
         ioqueue.head = iohead;
         tmp = iohead;
-
         while(tmp != NULL){//tmp will go trough the full i/o queue
-
            // cout<<"In I/O: "<<tmp->name<<"\t"<<tmp->data[tmp->internalCount]<<endl;
-
             if(tmp->data[tmp->internalCount] == 0){
-
                 tmp->internalCount++;
                 //tmp->data;
                 //detach node tmp depending of where it is on the list
-                    if(tmp->prev != NULL && tmp->next !=NULL){//if temp is in the middle
-
-                        tmp->next->prev = tmp->prev;
-                        tmp->prev ->next = tmp->next;
-
-                    }else if(tmp->prev != NULL && tmp->next == NULL){//if temp is at the end
-
-                        tmp->prev->next = tmp->next;
-
-                    }else if(tmp->prev == NULL && tmp->next != NULL){//if temp is the head and the queue is not empty
-
-                        iohead = tmp->next;
-                        iohead->prev = NULL;
-                    }else if(tmp->prev == NULL && tmp->next == NULL){//if temp is the head and the queue is empty
-
-                        iohead = NULL;
-                    }
+                if(tmp->prev != NULL && tmp->next !=NULL){//if temp is in the middle
+                    tmp->next->prev = tmp->prev;
+                    tmp->prev ->next = tmp->next;
+                }else if(tmp->prev != NULL && tmp->next == NULL){//if temp is at the end
+                    tmp->prev->next = tmp->next;
+                }else if(tmp->prev == NULL && tmp->next != NULL){//if temp is the head and the queue is not empty
+                    iohead = tmp->next;
+                    iohead->prev = NULL;
+                }else if(tmp->prev == NULL && tmp->next == NULL){//if temp is the head and the queue is empty
+                    iohead = NULL;
+                }
                     
-                    if(wqueue.gethead() == NULL){//if cpu is empty
-
-                        cpu = tmp;
-                        wqueuetail = tmp;
-                        tmp = tmp->next;
-                        cpu->prev = NULL;
-                        cpu->next = NULL;
-
-
-                    }else{//if there is processes in the waiting queue
-
-                        wqueuetail->next = tmp;
-                        tmp = tmp->next;
-                        wqueuetail->next->prev = wqueuetail;
-                        wqueuetail = wqueuetail->next;
-                        wqueuetail->next = NULL;
-
-                    }
-               // }
-
+                if(wqueue.gethead() == NULL){//if cpu is empty
+                    cpu = tmp;
+                    wqueuetail = tmp;
+                    tmp = tmp->next;
+                    cpu->prev = NULL;
+                    cpu->next = NULL;
+                }else{//if there is processes in the waiting queue
+                    wqueuetail->next = tmp;
+                    tmp = tmp->next;
+                    wqueuetail->next->prev = wqueuetail;
+                    wqueuetail = wqueuetail->next;
+                    wqueuetail->next = NULL;
+                }
             }else{
                 tmp->data[tmp->internalCount]--;
                 tmp = tmp->next;
-
             }
-
         }
 
     }
@@ -344,9 +275,8 @@ int main (){
     cout<<"time: "<<externalcounter<<endl;
     externalcounter++;
     
-        
+    
     }
-
     cout << "\n\n" << externalcounter <<endl;
     results.display();
 
