@@ -239,7 +239,6 @@ int main (){
                 tmp = tmp->next;
             }
         }
-
     }
     wqueue.head= cpu;
     ioqueue.head = iohead;
@@ -256,7 +255,5 @@ int main (){
     }
     cout << "\n\n" << externalcounter <<endl;
     results.display();
-
-
-return 0;
+    return 0;
 }
