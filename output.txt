@@ -4,11 +4,11 @@
 
                 Current Time: 0
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P1                   6
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P2                  19
                   P3                  12
@@ -25,11 +25,11 @@ The I/O Queue is empty
 
                 Current Time: 6
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P2                  19
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P3                  12
                   P4                  11
@@ -38,7 +38,7 @@ The I/O Queue is empty
                   P7                   3
                   P8                  15
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P1                  21
 --------------------------------------------------------------------------------
@@ -47,11 +47,11 @@ The I/O Queue is empty
 
                 Current Time: 25
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P3                  12
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P4                  11
                   P5                  16
@@ -59,7 +59,7 @@ The I/O Queue is empty
                   P7                   3
                   P8                  15
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P1                   2
                   P2                  48
@@ -69,11 +69,11 @@ The I/O Queue is empty
 
                 Current Time: 37
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P4                  11
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P5                  16
                   P6                  20
@@ -81,7 +81,7 @@ The I/O Queue is empty
                   P8                  15
                   P1                   9
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P2                  36
                   P3                  14
@@ -91,18 +91,18 @@ The I/O Queue is empty
 
                 Current Time: 48
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P5                  16
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P6                  20
                   P7                   3
                   P8                  15
                   P1                   9
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P2                  25
                   P3                   3
@@ -113,18 +113,18 @@ The I/O Queue is empty
 
                 Current Time: 64
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P6                  20
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P7                   3
                   P8                  15
                   P1                   9
                   P3                   6
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P2                   9
                   P4                  29
@@ -135,18 +135,18 @@ The I/O Queue is empty
 
                 Current Time: 84
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P7                   3
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P8                  15
                   P1                   9
                   P3                   6
                   P2                  16
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P4                   9
                   P5                   2
@@ -157,18 +157,18 @@ The I/O Queue is empty
 
                 Current Time: 87
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P8                  15
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P1                   9
                   P3                   6
                   P2                  16
                   P5                  15
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P4                   6
                   P6                  28
@@ -179,18 +179,18 @@ The I/O Queue is empty
 
                 Current Time: 102
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P1                   9
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P3                   6
                   P2                  16
                   P5                  15
                   P4                   5
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P6                  13
                   P7                  29
@@ -201,17 +201,17 @@ The I/O Queue is empty
 
                 Current Time: 111
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P3                   6
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P2                  16
                   P5                  15
                   P4                   5
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P6                   4
                   P7                  20
@@ -223,17 +223,17 @@ The I/O Queue is empty
 
                 Current Time: 117
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P2                  16
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P5                  15
                   P4                   5
                   P6                  22
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P7                  14
                   P8                  35
@@ -245,17 +245,17 @@ The I/O Queue is empty
 
                 Current Time: 133
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P5                  15
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P4                   5
                   P6                  22
                   P7                   7
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P8                  19
                   P1                   6
@@ -267,18 +267,18 @@ The I/O Queue is empty
 
                 Current Time: 148
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P4                   5
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P6                  22
                   P7                   7
                   P3                   3
                   P1                   5
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P8                   4
                   P2                  17
@@ -289,18 +289,18 @@ The I/O Queue is empty
 
                 Current Time: 153
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P6                  22
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P7                   7
                   P3                   3
                   P1                   5
                   P8                   4
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P2                  12
                   P5                  16
@@ -311,11 +311,11 @@ The I/O Queue is empty
 
                 Current Time: 175
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P7                   7
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P3                   3
                   P1                   5
@@ -323,7 +323,7 @@ The I/O Queue is empty
                   P2                  17
                   P5                  12
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P4                  19
                   P6                  30
@@ -333,18 +333,18 @@ The I/O Queue is empty
 
                 Current Time: 182
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P3                   3
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P1                   5
                   P8                   4
                   P2                  17
                   P5                  12
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P4                  12
                   P6                  23
@@ -355,17 +355,17 @@ The I/O Queue is empty
 
                 Current Time: 185
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P1                   5
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P8                   4
                   P2                  17
                   P5                  12
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P4                   9
                   P6                  20
@@ -377,16 +377,16 @@ The I/O Queue is empty
 
                 Current Time: 190
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P8                   4
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P2                  17
                   P5                  12
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P4                   4
                   P6                  15
@@ -399,15 +399,15 @@ The I/O Queue is empty
 
                 Current Time: 194
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P2                  17
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P5                  12
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P4                   0
                   P6                  11
@@ -421,17 +421,17 @@ The I/O Queue is empty
 
                 Current Time: 211
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P5                  12
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P4                   6
                   P6                  25
                   P7                   6
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P3                   3
                   P1                   5
@@ -443,11 +443,11 @@ The I/O Queue is empty
 
                 Current Time: 223
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P4                   6
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P6                  25
                   P7                   6
@@ -455,7 +455,7 @@ The I/O Queue is empty
                   P1                   4
                   P8                  11
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P2                  17
                   P5                  31
@@ -465,18 +465,18 @@ The I/O Queue is empty
 
                 Current Time: 229
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P6                  25
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P7                   6
                   P3                   7
                   P1                   4
                   P8                  11
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P2                  11
                   P5                  25
@@ -487,18 +487,18 @@ The I/O Queue is empty
 
                 Current Time: 254
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P7                   6
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P3                   7
                   P1                   4
                   P8                  11
                   P2                   6
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P5                   0
                   P4                  20
@@ -509,18 +509,18 @@ The I/O Queue is empty
 
                 Current Time: 260
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P3                   7
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P1                   4
                   P8                  11
                   P2                   6
                   P5                  14
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P4                  14
                   P6                  23
@@ -531,17 +531,17 @@ The I/O Queue is empty
 
                 Current Time: 267
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P1                   4
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P8                  11
                   P2                   6
                   P5                  14
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P4                   7
                   P6                  16
@@ -553,16 +553,16 @@ The I/O Queue is empty
 
                 Current Time: 271
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P8                  11
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P2                   6
                   P5                  14
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P4                   3
                   P6                  12
@@ -575,16 +575,16 @@ The I/O Queue is empty
 
                 Current Time: 282
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P2                   6
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P5                  14
                   P4                   8
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P6                   1
                   P7                  12
@@ -597,16 +597,16 @@ The I/O Queue is empty
 
                 Current Time: 288
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P5                  14
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P4                   8
                   P6                  11
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P7                   6
                   P3                  24
@@ -619,17 +619,17 @@ The I/O Queue is empty
 
                 Current Time: 302
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P4                   8
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P6                  11
                   P1                   3
                   P7                   5
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P3                  10
                   P8                  11
@@ -641,16 +641,16 @@ The I/O Queue is empty
 
                 Current Time: 310
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P6                  11
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P1                   3
                   P7                   5
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P3                   2
                   P8                   3
@@ -663,17 +663,17 @@ The I/O Queue is empty
 
                 Current Time: 321
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P1                   3
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P7                   5
                   P3                   8
                   P8                   4
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P2                  11
                   P5                   7
@@ -685,16 +685,16 @@ The I/O Queue is empty
 
                 Current Time: 324
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P7                   5
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P3                   8
                   P8                   4
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P2                   8
                   P5                   4
@@ -707,16 +707,16 @@ The I/O Queue is empty
 
                 Current Time: 329
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P3                   8
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P8                   4
                   P5                  13
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P2                   3
                   P4                  32
@@ -729,16 +729,16 @@ The I/O Queue is empty
 
                 Current Time: 337
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P8                   4
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P5                  13
                   P2                   8
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P4                  24
                   P6                  28
@@ -751,15 +751,15 @@ The I/O Queue is empty
 
                 Current Time: 341
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P5                  13
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P2                   8
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P4                  20
                   P6                  24
@@ -773,13 +773,13 @@ The I/O Queue is empty
 
                 Current Time: 354
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P2                   8
 ----------------------------------------
 The waiting queue is empty
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P4                   7
                   P6                  11
@@ -794,13 +794,13 @@ The waiting queue is empty
 
                 Current Time: 362
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P4                   4
 ----------------------------------------
 The waiting queue is empty
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P6                   3
                   P1                   3
@@ -815,15 +815,15 @@ The waiting queue is empty
 
                 Current Time: 366
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P6                  17
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P1                   6
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P7                  17
                   P3                  25
@@ -837,15 +837,15 @@ The waiting queue is empty
 
                 Current Time: 383
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P1                   6
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P8                   3
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P7                   0
                   P3                   8
@@ -859,16 +859,16 @@ The waiting queue is empty
 
                 Current Time: 389
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P8                   3
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P7                   4
                   P5                  16
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P3                   2
                   P2                   7
@@ -881,16 +881,16 @@ The waiting queue is empty
 
                 Current Time: 392
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P7                   4
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P5                  16
                   P3                  11
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P2                   4
                   P4                  35
@@ -903,15 +903,15 @@ The waiting queue is empty
 
                 Current Time: 396
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P5                  16
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P3                  11
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P2                   0
                   P4                  31
@@ -925,15 +925,15 @@ The waiting queue is empty
 
                 Current Time: 412
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P3                  11
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P2                  21
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P4                  15
                   P6                   5
@@ -947,16 +947,16 @@ The waiting queue is empty
 
                 Current Time: 423
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P2                  21
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P6                  18
                   P7                   7
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P4                   4
                   P1                  11
@@ -969,11 +969,11 @@ The waiting queue is empty
 
                 Current Time: 444
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P6                  18
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P7                   7
                   P4                  13
@@ -981,7 +981,7 @@ The waiting queue is empty
                   P1                   4
                   P8                   5
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P3                  23
                   P2                  34
@@ -991,18 +991,18 @@ The waiting queue is empty
 
                 Current Time: 462
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P7                   7
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P4                  13
                   P5                  12
                   P1                   4
                   P8                   5
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P3                   5
                   P2                  16
@@ -1013,18 +1013,18 @@ The waiting queue is empty
 
                 Current Time: 469
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P4                  13
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P5                  12
                   P1                   4
                   P8                   5
                   P3                   9
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P2                   9
                   P6                  24
@@ -1035,18 +1035,18 @@ The waiting queue is empty
 
                 Current Time: 482
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P5                  12
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P1                   4
                   P8                   5
                   P3                   9
                   P2                  19
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P6                  11
                   P7                  31
@@ -1057,18 +1057,18 @@ The waiting queue is empty
 
                 Current Time: 494
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P1                   4
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P8                   5
                   P3                   9
                   P2                  19
                   P6                   6
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P7                  19
                   P4                  42
@@ -1079,17 +1079,17 @@ The waiting queue is empty
 
                 Current Time: 498
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P8                   5
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P3                   9
                   P2                  19
                   P6                   6
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P7                  15
                   P4                  38
@@ -1101,16 +1101,16 @@ The waiting queue is empty
 
                 Current Time: 503
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P3                   9
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P2                  19
                   P6                   6
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P7                  10
                   P4                  33
@@ -1123,15 +1123,15 @@ The waiting queue is empty
 
                 Current Time: 512
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P2                  19
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P6                   6
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P7                   1
                   P4                  24
@@ -1144,18 +1144,18 @@ The waiting queue is empty
 
                 Current Time: 531
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P6                   6
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P7                   6
                   P5                  10
                   P8                   8
                   P1                   8
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P4                   5
                   P2                  39
@@ -1165,18 +1165,18 @@ The waiting queue is empty
 
                 Current Time: 537
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P7                   6
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P5                  10
                   P8                   8
                   P1                   8
                   P4                  11
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P2                  33
                   P6                  22
@@ -1186,17 +1186,17 @@ The waiting queue is empty
 
                 Current Time: 543
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P5                  10
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P8                   8
                   P1                   8
                   P4                  11
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P2                  27
                   P6                  16
@@ -1207,16 +1207,16 @@ The waiting queue is empty
 
                 Current Time: 553
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P8                   8
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P1                   8
                   P4                  11
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P2                  17
                   P6                   6
@@ -1228,16 +1228,16 @@ The waiting queue is empty
 
                 Current Time: 561
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P1                   8
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P4                  11
                   P6                  16
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P2                   9
                   P7                  36
@@ -1249,15 +1249,15 @@ The waiting queue is empty
 
                 Current Time: 569
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P4                  11
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P6                  16
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P2                   1
                   P7                  28
@@ -1270,15 +1270,15 @@ The waiting queue is empty
 
                 Current Time: 580
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P6                  16
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P2                  10
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P7                  17
                   P5                   6
@@ -1291,16 +1291,16 @@ The waiting queue is empty
 
                 Current Time: 596
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P2                  10
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P5                  11
                   P8                   6
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P7                   1
                   P1                   0
@@ -1311,17 +1311,17 @@ The waiting queue is empty
 
                 Current Time: 606
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P5                  11
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P8                   6
                   P1                   3
                   P7                   5
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P4                  35
                   P2                  31
@@ -1331,16 +1331,16 @@ The waiting queue is empty
 
                 Current Time: 617
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P8                   6
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P1                   3
                   P7                   5
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P4                  24
                   P2                  20
@@ -1350,15 +1350,15 @@ The waiting queue is empty
 
                 Current Time: 623
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P1                   3
 ----------------------------------------
-   Cureently Waiting
+   Currently Waiting
              Process               Burst
                   P7                   5
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P4                  18
                   P2                  14
@@ -1369,13 +1369,13 @@ The waiting queue is empty
 
                 Current Time: 626
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P7                   5
 ----------------------------------------
 The waiting queue is empty
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P4                  15
                   P2                  11
@@ -1390,7 +1390,7 @@ CPU is currently IDLE
 ----------------------------------------
 The waiting queue is empty
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P4                  10
                   P2                   6
@@ -1402,13 +1402,13 @@ The waiting queue is empty
 
                 Current Time: 637
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P2                   7
 ----------------------------------------
 The waiting queue is empty
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P4                   3
                   P8                  30
@@ -1419,13 +1419,13 @@ The waiting queue is empty
 
                 Current Time: 645
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P4                  10
 ----------------------------------------
 The waiting queue is empty
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P8                  22
                   P7                   7
@@ -1435,13 +1435,13 @@ The waiting queue is empty
 
                 Current Time: 655
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P7                   6
 ----------------------------------------
 The waiting queue is empty
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P8                  12
 --------------------------------------------------------------------------------
@@ -1454,7 +1454,7 @@ CPU is currently IDLE
 ----------------------------------------
 The waiting queue is empty
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P8                   6
                   P7                  43
@@ -1464,13 +1464,13 @@ The waiting queue is empty
 
                 Current Time: 667
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P8                   9
 ----------------------------------------
 The waiting queue is empty
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P7                  37
 --------------------------------------------------------------------------------
@@ -1483,7 +1483,7 @@ CPU is currently IDLE
 ----------------------------------------
 The waiting queue is empty
 ----------------------------------------
-    Cureently in I/O
+    Currently in I/O
              Process       I/O time left
                   P7                  27
 --------------------------------------------------------------------------------
@@ -1492,7 +1492,7 @@ The waiting queue is empty
 
                 Current Time: 704
 ----------------------------------------
-    Cureently in CPU               Burst
+    Currently in CPU               Burst
 
                   P7                   4
 ----------------------------------------
@@ -1522,7 +1522,7 @@ The I/O Queue is empty
                   P8                  88                 677                 334
                   P7                  85                 709                 314
 --------------------------------------------------------------------------------
-            Avreges:               44.75             629.625             279.125
+           Averages:               44.75             629.625             279.125
 --------------------------------------------------------------------------------
 
 Total context switches                  72

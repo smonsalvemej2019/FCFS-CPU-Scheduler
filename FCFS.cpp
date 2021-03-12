@@ -34,11 +34,7 @@ class linked_list{
     public: 
     node *head,*tail;
     linked_list();//constructor
-    int nodecntr();//counts the number of nodes in the list
     void create_node(string name, int data[], int datasize);//create node and inserts it at the end
-    void sethead(node* newhead);//sets a new head 
-    void display();//data display m ethod
-    void displayAdj(int pos);//displays the values of the, and adjacent to the given position
     node* gethead();//get head method
     node* gettail();//get tail method
 };
@@ -282,13 +278,13 @@ void displayCurrent(linked_list wqueue, linked_list ioqueue, int time, ofstream&
             output<<"\n"<<setw(20)<<right<<"CPU is currently IDLE";
     }else{
             wqueueHead = cpu->next;
-            output<<"\n"<<setw(20)<<right<<"Cureently in CPU"<<setw(20)<<right<<"Burst";
+            output<<"\n"<<setw(20)<<right<<"Currently in CPU"<<setw(20)<<right<<"Burst";
             output<<"\n\n"<<setw(20)<<right<<cpu->name<<setw(20)<<right<<cpu->data[cpu->internalCount];
     }
     output<<"\n----------------------------------------";
     if(wqueueHead == NULL){output<<"\n"<<setw(20)<<right<<"The waiting queue is empty";}
     else{
-        output<<"\n"<<setw(20)<<right<<"Cureently Waiting";
+        output<<"\n"<<setw(20)<<right<<"Currently Waiting";
         output<<"\n"<<setw(20)<<right<<"Process"<<setw(20)<<right<<"Burst";
         while(wqueueHead!=NULL){
         output<<"\n"<<setw(20)<<right<<wqueueHead->name<<setw(20)<<right<<wqueueHead->data[wqueueHead->internalCount];
@@ -298,7 +294,7 @@ void displayCurrent(linked_list wqueue, linked_list ioqueue, int time, ofstream&
     output<<"\n----------------------------------------";
     if(ioqueueHead == NULL){output<<"\n"<<setw(20)<<right<<"The I/O Queue is empty";}
     else{
-        output<<"\n"<<setw(20)<<right<<"Cureently in I/O";
+        output<<"\n"<<setw(20)<<right<<"Currently in I/O";
         output<<"\n"<<setw(20)<<right<<"Process"<<setw(20)<<right<<"I/O time left";
         while(ioqueueHead!=NULL){
         output<<"\n"<<setw(20)<<right<<ioqueueHead->name<<setw(20)<<right<<ioqueueHead->data[ioqueueHead->internalCount];
@@ -309,9 +305,9 @@ void displayCurrent(linked_list wqueue, linked_list ioqueue, int time, ofstream&
 }
 void getAverages(linked_list *result, int timer, ofstream& output, int idletime){
     node * tmp = result->gethead();
-    float ttAvg;
-    float rtAvg;
-    float watAvg;
+    float ttAvg=0;
+    float rtAvg=0;
+    float watAvg=0;
     int contextSwitch;
     output<<"\n--------------------------------------------------------------------------------";
     output<<"\n"<<setw(20)<<right<<"Process"<<setw(20)<<right<<"Response Time"<<setw(20)<<right<<"Turnaround Time"
@@ -329,7 +325,7 @@ void getAverages(linked_list *result, int timer, ofstream& output, int idletime)
     }
     output<<"\n--------------------------------------------------------------------------------";
     output<<"\n"
-    <<setw(20)<<right<<"Avreges:"
+    <<setw(20)<<right<<"Averages:"
     <<setw(20)<<right<<rtAvg/8
     <<setw(20)<<right<<ttAvg/8
     <<setw(20)<<right<< watAvg/8;
