@@ -88,13 +88,14 @@ node * linked_list::gettail(){
 //-------------------------------------Function Prototype-------------------------------------------//
 
 void displayCurrent(linked_list wqueue, linked_list ioqueue, int time, ofstream& output);
-void getAverages(linked_list *result, int timer, ofstream& output);
+void getAverages(linked_list *result, int timer, ofstream& output, int idletime);
 
 //-------------------------------------Main Function------------------------------------------------//
 
 int main (){
     ofstream output;
     output.open("output.txt");
+    int idletime = 0;
      //cpu time, I/O time, cpu, I/O, cpu....
     int P1[] = {6, 21, 9, 28, 5, 26, 4, 22, 3, 41, 6, 45, 4, 27, 8 , 27, 3};
     int P2[] = {19, 48, 16, 32, 17, 29, 6, 44, 8, 34, 21, 34, 19, 39, 10, 31, 7};
@@ -215,7 +216,7 @@ int main (){
             }
         } 
         if(cpu!= NULL) {cpu->data[cpu->internalCount]--; cpu->totaltime++;}
-        }
+        }else{idletime++;}
 //--if the I/O quque is not empty--------------------------------------------------//
     if(iohead != NULL){//process the i/o queue if not empty
         ioqueue.head = iohead;
@@ -266,7 +267,7 @@ int main (){
     ioqueue.head = iohead;
     externalcounter++;
     }
-    getAverages(&results, externalcounter, output);
+    getAverages(&results, externalcounter, output, idletime);
     return 0;
 }
 void displayCurrent(linked_list wqueue, linked_list ioqueue, int time, ofstream& output){
@@ -306,11 +307,11 @@ void displayCurrent(linked_list wqueue, linked_list ioqueue, int time, ofstream&
     }
     output<<"\n--------------------------------------------------------------------------------";
 }
-void getAverages(linked_list *result, int timer, ofstream& output){
+void getAverages(linked_list *result, int timer, ofstream& output, int idletime){
     node * tmp = result->gethead();
-    int ttAvg;
-    int rtAvg;
-    int watAvg;
+    float ttAvg;
+    float rtAvg;
+    float watAvg;
     int contextSwitch;
     output<<"\n--------------------------------------------------------------------------------";
     output<<"\n"<<setw(20)<<right<<"Process"<<setw(20)<<right<<"Response Time"<<setw(20)<<right<<"Turnaround Time"
@@ -333,8 +334,14 @@ void getAverages(linked_list *result, int timer, ofstream& output){
     <<setw(20)<<right<<ttAvg/8
     <<setw(20)<<right<< watAvg/8;
     output<<"\n--------------------------------------------------------------------------------";
+    float cpuUtil =timer - idletime;
+    cpuUtil /=timer;
+    cpuUtil *=100;
     output<<"\n\n"
     <<setw(20)<<right<<"Total context switches"
     <<setw(20)<<right<<contextSwitch;
+    output<<"\n\n"
+    <<setw(20)<<right<<"CPU utilization"
+    <<setw(20)<<right<<cpuUtil<<"%";
     output.close();
 }
