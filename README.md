@@ -29,7 +29,7 @@ and an internal counter that will manage the position of the array. My desired o
 <p>for more detail on the code please go to repo\code-snipets\3-5-21Update.txt</p>
 
 <h2>03/6/21</h2>
-<p>The mechanism to prevent problems with memory consist of the following:</p>
+<p>The mechanism to prevent memory errors consist of the following:</p>
 <dl>
 <dt>If waiting queue head =/= Null</dt>
 <dd>Run code.</dd>
@@ -38,5 +38,10 @@ and an internal counter that will manage the position of the array. My desired o
 </dl>
 <p>The code will process only the head of the waiting queue (CPU) and/or the whole I/O queue.
 Whenever the internal counters for any process increases then it will make a switch (context switch). In a switch, if the process is moved into I/O then it will be put on any position (position does not matter because the I/O queue must be iterated trough completely) and the head of waiting queue will be pointing to a new process.</p>
-
  
+<h2>3/12/2020 Final Update</h2>
+<p>The simulation of the first come first serve scheduling algorithm is finalized. The program is able to take data from the arrays and calculate turnaround time, waiting time, and response time. The algorithm will also display the CPU utilization as well as details on the queues.</p> 
+
+<p>The implementation approach involved two linked list, the waiting queue and the I/O queue. The head node of the waiting queue is the CPU. Every time the global counter hit the waiting list the program would only process the head node, if it hits the I/O queue, it would process every node within it. Class members keep track of the input arrays and also hold the information on the response time waiting time, etc.</p> 
+
+<p>If you want to run the simulation yourself, make sure you create an “output.txt” in your directory. </p>
